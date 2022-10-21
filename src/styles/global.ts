@@ -9,6 +9,10 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  body {
+    background-color: ${(props) => props.theme.background};
+  }
+
   body, input, text-area, button {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
