@@ -4,50 +4,6 @@ import styled from "styled-components";
 
 import mainBackgrounImage from "./assets/background.svg";
 
-export const HeaderContainer = styled.nav`
-  height: 6.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-export const HeaderContent = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 1120px;
-`;
-
-export const HeaderActionsContainer = styled.div`
-  display: flex;
-  gap: 12px;
-  align-items: center;
-`;
-
-export const LocationContainer = styled.span`
-  display: flex;
-  align-items: center;
-  padding: 0.5rem;
-  font-size: 0.875rem;
-  border-radius: 6px;
-
-  background: ${(props) => props.theme["purple-light"]};
-  color: ${(props) => props.theme["purple-dark"]};
-
-  span {
-    color: ${(props) => props.theme["brand-purple"]};
-  }
-`;
-
-export const CartContainer = styled.span`
-  padding: 8px;
-  border-radius: 6px;
-
-  background: ${(props) => props.theme["yellow-light"]};
-  color: ${(props) => props.theme["yellow-dark"]};
-`;
-
 export const IntroductionBody = styled.div`
   background: url(${mainBackgrounImage}) no-repeat;
   background-size: cover;
@@ -119,4 +75,32 @@ export const TextContent = styled.p<BenefitsProps>`
     background: ${(props) =>
       props.theme[BACKGROUND_COLORS[props.backgroundColor]]};
   }
+`;
+
+export const BodyContainer = styled.main`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.3rem;
+`;
+
+export const ContainerTitle = styled.div`
+  display: flex;
+  width: 100%;
+  max-width: 1120px;
+  margin-top: 2rem;
+
+  h1 {
+    font-family: "Baloo 2";
+    font-weight: 800;
+  }
+`;
+
+export const BodyContent = styled.div`
+  max-width: 1120px;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+
+  border: 1px solid turquoise;
 `;

@@ -1,47 +1,31 @@
 /** @format */
 
 import { ThemeProvider } from "styled-components";
-import { Coffee, MapPin, Package, ShoppingCart, Timer } from "phosphor-react";
+import { Coffee, Package, ShoppingCart, Timer } from "phosphor-react";
 
 import { defaultTheme } from "./styles/default";
 import { GlobalStyle } from "./styles/global";
 
 import {
   BenefitsContainer,
-  CartContainer,
-  HeaderActionsContainer,
-  HeaderContainer,
-  HeaderContent,
+  BodyContainer,
+  BodyContent,
+  ContainerTitle,
   IntroductionBody,
   IntroductionContainer,
-  LocationContainer,
   TextContent,
   TextContentContainer,
 } from "./homeStyle";
 
-import logo from "./assets/logo.svg";
 import mainCoffeeImage from "./assets/mainCoffeeImage.svg";
+
+import { Header } from "./components/Header";
+import { CoffeeCard } from "./components/CoffeeCard";
 
 export function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
-      <HeaderContainer>
-        <HeaderContent>
-          <img src={logo} alt="" />
-          <HeaderActionsContainer>
-            <LocationContainer>
-              <span>
-                <MapPin size={22} weight="fill" />
-              </span>
-              Porto Alegre, RS
-            </LocationContainer>
-
-            <CartContainer>
-              <ShoppingCart size={22} weight="fill" />
-            </CartContainer>
-          </HeaderActionsContainer>
-        </HeaderContent>
-      </HeaderContainer>
+      <Header />
 
       <IntroductionBody>
         <IntroductionContainer>
@@ -85,6 +69,20 @@ export function App() {
         </IntroductionContainer>
       </IntroductionBody>
 
+      <BodyContainer>
+        <ContainerTitle>
+          <h1>Nossos cafés</h1>
+        </ContainerTitle>
+
+        <BodyContent>
+          <CoffeeCard key={1} />
+          <CoffeeCard key={2} />
+          <CoffeeCard key={3} />
+          <CoffeeCard key={4} />
+          <CoffeeCard key={5} />
+          <CoffeeCard key={6} />
+        </BodyContent>
+      </BodyContainer>
       <GlobalStyle />
     </ThemeProvider>
   );
