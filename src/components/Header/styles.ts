@@ -15,6 +15,10 @@ export const HeaderContent = styled.div`
   align-items: center;
   width: 100%;
   max-width: 1125px;
+
+  img {
+    cursor: pointer;
+  }
 `;
 
 export const HeaderActionsContainer = styled.div`
@@ -38,10 +42,34 @@ export const LocationContainer = styled.span`
   }
 `;
 
-export const CartContainer = styled.span`
-  padding: 8px;
+export const CartContainer = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 6px;
-
+  position: relative;
   background: ${(props) => props.theme["yellow-light"]};
-  color: ${(props) => props.theme["yellow-dark"]};
+
+  a {
+    color: ${(props) => props.theme["yellow-dark"]};
+    padding: 8px;
+  }
+`;
+
+export const TotalItems = styled.span`
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  position: absolute;
+  right: -8px;
+  top: -8px;
+
+  font-weight: 700;
+  font-size: 0.75rem;
+
+  background: ${(props) => props.theme["yellow-dark"]};
+  color: ${(props) => props.theme.white};
 `;
