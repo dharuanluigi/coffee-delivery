@@ -83,6 +83,7 @@ export const BodyContainer = styled.main`
   align-items: center;
   gap: 3.3rem;
   background: ${(props) => props.theme.background};
+  margin-bottom: 9.8rem;
 `;
 
 export const ContainerTitle = styled.div`
