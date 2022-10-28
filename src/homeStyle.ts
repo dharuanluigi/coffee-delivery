@@ -87,7 +87,7 @@ export const BodyContainer = styled.main`
 export const ContainerTitle = styled.div`
   display: flex;
   width: 100%;
-  max-width: 1120px;
+  max-width: 1125px;
   margin-top: 2rem;
 
   h1 {
@@ -97,10 +97,9 @@ export const ContainerTitle = styled.div`
 `;
 
 export const BodyContent = styled.div`
-  max-width: 1120px;
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
+  max-width: 1125px;
 
-  border: 1px solid turquoise;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem 2rem;
 `;

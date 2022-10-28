@@ -14,7 +14,7 @@ export const HeaderContent = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1120px;
+  max-width: 1125px;
 `;
 
 export const HeaderActionsContainer = styled.div`

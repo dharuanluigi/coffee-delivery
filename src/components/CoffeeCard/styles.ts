@@ -11,7 +11,6 @@ export const CoffeeCardContainer = styled.div`
   border-radius: 6px 36px;
   padding: 1.25rem;
 
-  margin-bottom: 100px; // <--- REMOVE THIS
   background: ${(props) => props.theme["base-card"]};
 
   img {
