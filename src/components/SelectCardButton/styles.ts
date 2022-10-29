@@ -16,6 +16,8 @@ export const SelectCardContainer = styled.div`
 `;
 
 export const CardButton = styled.label`
+  width: 11.17rem;
+  height: 3.19rem;
   display: flex;
   align-items: center;
   gap: 0.75rem;
