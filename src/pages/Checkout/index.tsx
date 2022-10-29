@@ -14,6 +14,7 @@ import {
   FinishOrderButton,
   FormCompleteOrder,
   PaymentSection,
+  PaymentSectionHeader,
   ReviewItems,
   ReviewOrderSection,
   ReviewOrderSectionContent,
@@ -28,7 +29,7 @@ export function Checkout() {
           <h1>Complete seu pedido</h1>
           <AddressSection>
             <AddressSectionHeader>
-              <MapPin size={22} weight="bold" />
+              <MapPin size={22} />
               <div>
                 <h1>Endereço de Entrega</h1>
                 <span>Informe o endereço onde deseja receber seu pedido</span>
@@ -37,8 +38,8 @@ export function Checkout() {
             <AddressForm />
           </AddressSection>
           <PaymentSection>
-            <AddressSectionHeader>
-              <CurrencyDollar size={22} weight="bold" />
+            <PaymentSectionHeader>
+              <CurrencyDollar size={22} />
               <div>
                 <h1>Pagamento</h1>
                 <span>
@@ -46,7 +47,7 @@ export function Checkout() {
                   pagar
                 </span>
               </div>
-            </AddressSectionHeader>
+            </PaymentSectionHeader>
             <CardsSection>
               <SelectCardButton />
               <SelectCardButton />

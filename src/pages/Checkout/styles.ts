@@ -74,6 +74,10 @@ export const CardsSection = styled.section`
   gap: 0.75rem;
 `;
 
+export const PaymentSectionHeader = styled(AddressSectionHeader)`
+  color: ${(props) => props.theme["brand-purple"]};
+`;
+
 export const ReviewOrderSection = styled.aside`
   display: flex;
   flex-direction: column;
