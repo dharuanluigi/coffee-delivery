@@ -1,12 +1,14 @@
 /** @format */
 
-import { MapPin } from "phosphor-react";
+import { CurrencyDollar, MapPin } from "phosphor-react";
 import { CardCart } from "../../components/CardCart";
+import { SelectCardButton } from "../../components/SelectCardButton";
 import { AddressForm } from "./components/AddressForm";
 import {
   AddressSection,
   AddressSectionHeader,
   CardItem,
+  CardsSection,
   CheckoutContainer,
   DataSection,
   FinishOrderButton,
@@ -34,7 +36,23 @@ export function Checkout() {
             </AddressSectionHeader>
             <AddressForm />
           </AddressSection>
-          <PaymentSection>Pagamento</PaymentSection>
+          <PaymentSection>
+            <AddressSectionHeader>
+              <CurrencyDollar size={22} weight="bold" />
+              <div>
+                <h1>Pagamento</h1>
+                <span>
+                  O pagamento é feito na entrega. Escolha a forma que deseja
+                  pagar
+                </span>
+              </div>
+            </AddressSectionHeader>
+            <CardsSection>
+              <SelectCardButton />
+              <SelectCardButton />
+              <SelectCardButton />
+            </CardsSection>
+          </PaymentSection>
         </DataSection>
         <ReviewOrderSection>
           <h1>Cafés selecionados</h1>

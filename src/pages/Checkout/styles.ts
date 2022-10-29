@@ -63,6 +63,15 @@ export const AddressSectionHeader = styled.div`
 
 export const PaymentSection = styled(BaseCard)`
   height: 12.9375rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+`;
+
+export const CardsSection = styled.section`
+  width: 100%;
+  display: flex;
+  gap: 0.75rem;
 `;
 
 export const ReviewOrderSection = styled.aside`
