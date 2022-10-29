@@ -68,12 +68,6 @@ export const PaymentSection = styled(BaseCard)`
   gap: 2rem;
 `;
 
-export const CardsSection = styled.section`
-  width: 100%;
-  display: flex;
-  gap: 0.75rem;
-`;
-
 export const PaymentSectionHeader = styled(AddressSectionHeader)`
   color: ${(props) => props.theme["brand-purple"]};
 `;

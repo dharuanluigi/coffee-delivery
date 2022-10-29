@@ -1,15 +1,22 @@
 /** @format */
 
 import { CreditCard } from "phosphor-react";
-import { SelectCardContainer } from "./styles";
+import { CardButton, SelectCardContainer } from "./styles";
 
-export function SelectCardButton() {
+interface SelectCardProps {
+  id: string;
+}
+
+export function SelectCardButton({ id }: SelectCardProps) {
   return (
     <SelectCardContainer>
-      <span>
-        <CreditCard size={16} />
-      </span>
-      CARTÃO DE CRÉDITO
+      <input type="radio" name="method" id={id} />
+      <CardButton htmlFor={id}>
+        <span>
+          <CreditCard size={16} />
+        </span>
+        CARTÃO DE CRÉDITO
+      </CardButton>
     </SelectCardContainer>
   );
 }

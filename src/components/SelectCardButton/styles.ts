@@ -2,7 +2,20 @@
 
 import styled from "styled-components";
 
-export const SelectCardContainer = styled.button`
+export const SelectCardContainer = styled.div`
+  display: flex;
+  input[type="radio"] {
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+  }
+
+  input[type="radio"]:checked + label {
+    outline: 1px solid ${(props) => props.theme["brand-purple"]};
+  }
+`;
+
+export const CardButton = styled.label`
   display: flex;
   align-items: center;
   gap: 0.75rem;
