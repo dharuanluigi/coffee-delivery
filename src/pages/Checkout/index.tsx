@@ -72,8 +72,12 @@ export function Checkout() {
                   <td>R$ 3,50</td>
                 </tr>
                 <tr>
-                  <td>Total</td>
-                  <td>R$ 33,20</td>
+                  <td>
+                    <span>Total</span>
+                  </td>
+                  <td>
+                    <span>R$ 33,20</span>
+                  </td>
                 </tr>
               </tbody>
             </ReviewTotalPrice>

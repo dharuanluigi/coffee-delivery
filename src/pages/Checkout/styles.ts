@@ -116,6 +116,14 @@ export const ReviewTotalPrice = styled.table`
     tr {
       display: flex;
       justify-content: space-between;
+
+      color: ${(props) => props.theme["base-text"]};
+
+      span {
+        color: ${(props) => props.theme["base-subtitle"]};
+        font-weight: 700;
+        font-size: 1.25rem;
+      }
     }
   }
 `;
