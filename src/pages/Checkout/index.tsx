@@ -1,6 +1,7 @@
 /** @format */
 
 import { CurrencyDollar, MapPin } from "phosphor-react";
+import { NavLink } from "react-router-dom";
 import { CardCart } from "../../components/CardCart";
 import { AddressForm } from "./components/AddressForm";
 import { MethodsPayment } from "./components/MethodsPayment";
@@ -81,7 +82,9 @@ export function Checkout() {
                 </tr>
               </tbody>
             </ReviewTotalPrice>
-            <FinishOrderButton>CONFIRMAR PEDIDO</FinishOrderButton>
+            <NavLink to="/confirmed-order">
+              <FinishOrderButton>CONFIRMAR PEDIDO</FinishOrderButton>
+            </NavLink>
           </ReviewOrderSectionContent>
         </ReviewOrderSection>
       </FormCompleteOrder>
