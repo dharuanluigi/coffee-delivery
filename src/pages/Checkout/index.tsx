@@ -1,8 +1,11 @@
 /** @format */
 
+import { MapPin } from "phosphor-react";
 import { CardCart } from "../../components/CardCart";
+import { AddressForm } from "./components/AddressForm";
 import {
   AddressSection,
+  AddressSectionHeader,
   CardItem,
   CheckoutContainer,
   DataSection,
@@ -21,7 +24,16 @@ export function Checkout() {
       <FormCompleteOrder>
         <DataSection>
           <h1>Complete seu pedido</h1>
-          <AddressSection>Endereço</AddressSection>
+          <AddressSection>
+            <AddressSectionHeader>
+              <MapPin size={22} weight="bold" />
+              <div>
+                <h1>Endereço de Entrega</h1>
+                <span>Informe o endereço onde deseja receber seu pedido</span>
+              </div>
+            </AddressSectionHeader>
+            <AddressForm />
+          </AddressSection>
           <PaymentSection>Pagamento</PaymentSection>
         </DataSection>
         <ReviewOrderSection>

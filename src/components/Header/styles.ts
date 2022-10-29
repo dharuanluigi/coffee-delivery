@@ -42,7 +42,7 @@ export const LocationContainer = styled.span`
   }
 `;
 
-export const CartContainer = styled.a`
+export const CartContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;

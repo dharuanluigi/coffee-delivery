@@ -34,6 +34,31 @@ const BaseCard = styled.section`
 
 export const AddressSection = styled(BaseCard)`
   height: 23.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+`;
+
+export const AddressSectionHeader = styled.div`
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+
+  color: ${(props) => props.theme["yellow-dark"]};
+
+  div {
+    line-height: 1.3;
+
+    h1 {
+      font-family: "Roboto";
+      font-weight: 400;
+      color: ${(props) => props.theme["base-subtitle"]};
+    }
+
+    span {
+      color: ${(props) => props.theme["base-text"]};
+    }
+  }
 `;
 
 export const PaymentSection = styled(BaseCard)`
