@@ -37,7 +37,8 @@ export function ConfirmedOrder() {
                 <Timer size={16} weight="fill" />
               </BulletIndicator>
               <p>
-                Previsão de entrega <strong>20 min - 30 min</strong>
+                Previsão de entrega <br />
+                <strong>20 min - 30 min</strong>
               </p>
             </DetailsDeliveryContainer>
             <DetailsDeliveryContainer>
@@ -45,7 +46,8 @@ export function ConfirmedOrder() {
                 <CurrencyDollar size={16} />
               </BulletIndicator>
               <p>
-                Pagamento na entrega <strong>Cartão de Crédito</strong>
+                Pagamento na entrega <br />
+                <strong>Cartão de Crédito</strong>
               </p>
             </DetailsDeliveryContainer>
           </DeliveryInformationsContent>
