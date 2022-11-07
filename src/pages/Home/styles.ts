@@ -2,7 +2,7 @@
 
 import styled from "styled-components";
 
-import mainBackgrounImage from "./assets/background.svg";
+import mainBackgrounImage from "../../assets/background.svg";
 
 export const IntroductionBody = styled.div`
   background: url(${mainBackgrounImage}) no-repeat;
@@ -16,7 +16,7 @@ export const IntroductionContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 3.5rem;
-  max-width: 1120px;
+  max-width: 1125px;
   margin: 6.75rem 0 6.75rem 0;
 `;
 
@@ -82,6 +82,8 @@ export const BodyContainer = styled.main`
   flex-direction: column;
   align-items: center;
   gap: 3.3rem;
+  background: ${(props) => props.theme.background};
+  margin-bottom: 9.8rem;
 `;
 
 export const ContainerTitle = styled.div`

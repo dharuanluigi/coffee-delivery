@@ -7,15 +7,19 @@ import {
   HeaderContainer,
   HeaderContent,
   LocationContainer,
+  TotalItems,
 } from "./styles";
 
 import logo from "../../assets/logo.svg";
+import { NavLink } from "react-router-dom";
 
 export function Header() {
   return (
     <HeaderContainer>
       <HeaderContent>
-        <img src={logo} alt="" />
+        <NavLink to="/" title="Página inicial">
+          <img src={logo} alt="" />
+        </NavLink>
         <HeaderActionsContainer>
           <LocationContainer>
             <span>
@@ -25,7 +29,10 @@ export function Header() {
           </LocationContainer>
 
           <CartContainer>
-            <ShoppingCart size={22} weight="fill" />
+            <TotalItems>3</TotalItems>
+            <NavLink to="/checkout" title="Conclusão de pedido">
+              <ShoppingCart size={22} weight="fill" />
+            </NavLink>
           </CartContainer>
         </HeaderActionsContainer>
       </HeaderContent>

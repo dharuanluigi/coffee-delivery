@@ -20,15 +20,6 @@ export const CoffeeCardContainer = styled.div`
     margin-bottom: 0.75rem;
   }
 
-  & > span {
-    padding: 4px 8px;
-    border-radius: 100px;
-    margin-bottom: 1rem;
-
-    background: ${(props) => props.theme["yellow-light"]};
-    color: ${(props) => props.theme["yellow-dark"]};
-  }
-
   h1 {
     font-family: "Baloo 2";
     font-weight: 700;
@@ -43,12 +34,16 @@ export const CoffeeCardContainer = styled.div`
   }
 `;
 
-export const CardPriceForm = styled.form`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.4rem;
+export const CoffeeTag = styled.span`
+  padding: 4px 8px;
+  border-radius: 100px;
+  margin-bottom: 1rem;
 
+  background: ${(props) => props.theme["yellow-light"]};
+  color: ${(props) => props.theme["yellow-dark"]};
+`;
+
+export const ViewPrice = styled.div`
   span {
     font-size: 0.875rem;
     color: ${(props) => props.theme["base-text"]};
@@ -59,17 +54,19 @@ export const CardPriceForm = styled.form`
     font-family: "Baloo 2";
     font-weight: 800;
   }
+`;
+
+export const CardPriceForm = styled.form`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.4rem;
 
   div + div {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-
-    input[type="number"] {
-      width: 4.5rem;
-      height: 2.3rem;
-    }
 
     button {
       width: 2.3rem;
