@@ -27,6 +27,7 @@ export const InputNumberContent = styled.input.attrs({ type: "number" })`
   text-align: center;
 
   background: transparent;
+  color: ${(props) => props.theme["base-title"]};
 `;
 
 export const InputNumberButton = styled.span`
