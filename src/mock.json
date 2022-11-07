@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "title": "Expresso Tradicional",
+    "details": "O tradicional café feito com água quente e grãos moídos",
+    "priceInCents": 990,
+    "tags": [
+      {
+        "id": 1,
+        "title": "Tradicional"
+      }
+    ]
+  }
+]

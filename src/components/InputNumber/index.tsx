@@ -1,6 +1,7 @@
 /** @format */
 
 import { Minus, Plus } from "phosphor-react";
+import { useState } from "react";
 import {
   InputContainer,
   InputNumberButton,
@@ -8,14 +9,28 @@ import {
 } from "./styles";
 
 export function InputNumber() {
+  const [quantity, setQuantity] = useState(0);
+
+  function handleMinus() {
+    if (quantity > 0) {
+      setQuantity((state) => state - 1);
+    }
+  }
+
+  function handlePlus() {
+    if (quantity < 10) {
+      setQuantity((state) => state + 1);
+    }
+  }
+
   return (
     <InputContainer>
-      <InputNumberButton>
+      <InputNumberButton onClick={handleMinus}>
         <Minus size={14} weight="bold" />
       </InputNumberButton>
-      <InputNumberContent />
+      <InputNumberContent value={quantity} readOnly />
       <InputNumberButton>
-        <Plus size={14} weight="bold" />
+        <Plus size={14} weight="bold" onClick={handlePlus} />
       </InputNumberButton>
     </InputContainer>
   );
