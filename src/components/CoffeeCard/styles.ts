@@ -19,72 +19,87 @@ export const CoffeeCardContainer = styled.div`
     margin-top: -40px;
     margin-bottom: 0.75rem;
   }
+`;
+
+export const CardPriceForm = styled.form`
+  height: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const TagsContainer = styled.div`
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+`;
+
+export const TextContentContainer = styled.div`
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
 
   h1 {
     font-family: "Baloo 2";
     font-weight: 700;
     font-size: 1.25rem;
-    margin-bottom: 0.5rem;
+    line-height: 1.3;
   }
 
   p {
     font-size: 0.875rem;
+    text-align: center;
     color: ${(props) => props.theme["base-label"]};
-    margin-bottom: 2rem;
   }
 `;
 
 export const CoffeeTag = styled.span`
   padding: 4px 8px;
   border-radius: 100px;
-  margin-bottom: 1rem;
 
   background: ${(props) => props.theme["yellow-light"]};
   color: ${(props) => props.theme["yellow-dark"]};
 `;
 
 export const ViewPrice = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  button {
+    width: 2.3rem;
+    height: 2.3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 8px;
+
+    background: ${(props) => props.theme["purple-dark"]};
+    color: ${(props) => props.theme["base-card"]};
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+
   span {
     font-size: 0.875rem;
     color: ${(props) => props.theme["base-text"]};
   }
 
-  span + span {
+  span + label {
     font-size: 1.5rem;
     font-family: "Baloo 2";
     font-weight: 800;
-  }
-`;
-
-export const CardPriceForm = styled.form`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.4rem;
-
-  div + div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-
-    button {
-      width: 2.3rem;
-      height: 2.3rem;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      border: none;
-      border-radius: 8px;
-
-      background: ${(props) => props.theme["purple-dark"]};
-      color: ${(props) => props.theme["base-card"]};
-    }
-
-    button:hover {
-      cursor: pointer;
-    }
+    color: ${(props) => props.theme["base-text"]};
   }
 `;
