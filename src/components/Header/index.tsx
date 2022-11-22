@@ -12,8 +12,11 @@ import {
 
 import logo from "../../assets/logo.svg";
 import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { CoffeeContext } from "../../contexts/CoffeeContext";
 
 export function Header() {
+  const { totalItensInCart } = useContext(CoffeeContext);
   return (
     <HeaderContainer>
       <HeaderContent>
@@ -29,7 +32,7 @@ export function Header() {
           </LocationContainer>
 
           <CartContainer>
-            <TotalItems>3</TotalItems>
+            <TotalItems>{totalItensInCart}</TotalItems>
             <NavLink to="/checkout" title="Conclusão de pedido">
               <ShoppingCart size={22} weight="fill" />
             </NavLink>
