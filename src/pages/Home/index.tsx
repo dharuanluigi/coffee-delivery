@@ -1,7 +1,7 @@
 /** @format */
 
 import { Coffee, Package, ShoppingCart, Timer } from "phosphor-react";
-import { CoffeeCard } from "../../components/CoffeeCard";
+import { CoffeeModel, CoffeeCard } from "../../components/CoffeeCard";
 import {
   BenefitsContainer,
   BodyContainer,
@@ -14,8 +14,22 @@ import {
 } from "./styles";
 
 import mainCoffeeImage from "../../assets/mainCoffeeImage.svg";
+import mockedCoffees from "../../mock.json";
+import { useEffect, useState } from "react";
+
+export interface CartProps {
+  item: CoffeeModel;
+  quantity: number;
+}
 
 export function Home() {
+  const [coffees, setCoffees] = useState<CoffeeModel[]>([]);
+
+  useEffect(() => {
+    const allCoffees = mockedCoffees as unknown as CoffeeModel[];
+    setCoffees(allCoffees);
+  }, []);
+
   return (
     <>
       <IntroductionBody>
@@ -66,12 +80,10 @@ export function Home() {
         </ContainerTitle>
 
         <BodyContent>
-          <CoffeeCard key={1} />
-          <CoffeeCard key={2} />
-          <CoffeeCard key={3} />
-          <CoffeeCard key={4} />
-          <CoffeeCard key={5} />
-          <CoffeeCard key={6} />
+          {coffees &&
+            coffees.map((coffee) => {
+              return <CoffeeCard key={coffee.id} coffee={coffee} />;
+            })}
         </BodyContent>
       </BodyContainer>
     </>

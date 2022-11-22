@@ -78,12 +78,14 @@ export const TextContent = styled.p<BenefitsProps>`
 `;
 
 export const BodyContainer = styled.main`
+  max-width: 1125px;
+
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 3.3rem;
   background: ${(props) => props.theme.background};
-  margin-bottom: 9.8rem;
+  margin: 0 auto 9.8rem auto;
 `;
 
 export const ContainerTitle = styled.div`
@@ -99,8 +101,6 @@ export const ContainerTitle = styled.div`
 `;
 
 export const BodyContent = styled.div`
-  max-width: 1125px;
-
   display: flex;
   flex-wrap: wrap;
   gap: 2.5rem 2rem;
