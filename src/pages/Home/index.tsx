@@ -17,8 +17,13 @@ import mainCoffeeImage from "../../assets/mainCoffeeImage.svg";
 import mockedCoffees from "../../mock.json";
 import { useEffect, useState } from "react";
 
+export interface CartProps {
+  item: CoffeeModel;
+  quantity: number;
+}
+
 export function Home() {
-  const [coffees, setCoffees] = useState<CoffeeModel[] | null>(null);
+  const [coffees, setCoffees] = useState<CoffeeModel[]>([]);
 
   useEffect(() => {
     const allCoffees = mockedCoffees as unknown as CoffeeModel[];

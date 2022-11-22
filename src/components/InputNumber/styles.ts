@@ -15,7 +15,7 @@ export const InputContainer = styled.div`
   background: ${(props) => props.theme["base-button"]};
 `;
 
-export const InputNumberContent = styled.input.attrs({ type: "number" })`
+export const InputNumberContent = styled.input`
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
     -webkit-appearance: none;
